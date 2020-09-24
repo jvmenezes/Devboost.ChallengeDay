@@ -9,5 +9,9 @@ namespace Devboost.ChallengeDay.Application.Commands
         public async Task AddConsumer(TransacaoDTO transacao)  
         {
         }
+
+        public async Task AddReal(TransacaoDTO transacao)
+        {
+        }
     }
 }

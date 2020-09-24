@@ -38,6 +38,8 @@ namespace Devboost.ChallengeDay
 
             app.UseAuthorization();
 
+            app.SwaggerAdd();
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

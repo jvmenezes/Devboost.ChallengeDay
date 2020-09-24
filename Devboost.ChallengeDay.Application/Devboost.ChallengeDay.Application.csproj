@@ -4,8 +4,4 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Devboost.ChallengeDay.Domain\Devboost.ChallengeDay.Domain.csproj" />
-  </ItemGroup>
-
 </Project>

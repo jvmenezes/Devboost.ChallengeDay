@@ -6,7 +6,7 @@ namespace Devboost.ChallengeDay.Domain.Interfaces.Commands
 {
     public interface ITransacaoCommand
     {
-        public async Task AddProducer(TransacaoDTO transacao) { 
-        }
+        Task AddProducer(TransacaoDTO transacao);
+        Task AddReal(TransacaoDTO transacao);
     }
 }

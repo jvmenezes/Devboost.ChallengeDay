@@ -22,8 +22,8 @@ namespace Devboost.ChallengeDay.Api.Controllers
             return Ok(result);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Post([FromBody] TransacaoDTO transacaoDTO)
+        [HttpPost("producer")]
+        public async Task<IActionResult> PostProducer([FromBody] TransacaoDTO transacaoDTO)
         {
             try
             {
@@ -32,7 +32,25 @@ namespace Devboost.ChallengeDay.Api.Controllers
 
                 await _transacaoCommand.AddProducer(transacaoDTO);
 
-                return Ok("Ação efetuado com sucesso!");
+                return Ok("Ação enviada para produção do Kafk efetuada com sucesso!");
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        [HttpPost("real")]
+        public async Task<IActionResult> Post([FromBody] TransacaoDTO transacaoDTO)
+        {
+            try
+            {
+                if (transacaoDTO == null)
+                    return NotFound();
+
+                await _transacaoCommand.AddReal(transacaoDTO);
+
+                return Ok("Ação enviada para armazenamento do DB efetuada com sucesso!");
             }
             catch (Exception ex)
             {

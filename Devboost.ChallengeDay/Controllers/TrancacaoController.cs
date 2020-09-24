@@ -3,6 +3,7 @@ using Devboost.ChallengeDay.Domain.Interfaces.Commands;
 using Devboost.ChallengeDay.Domain.Interfaces.Queries;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Threading.Tasks;
 
 namespace Devboost.ChallengeDay.Api.Controllers
 {
@@ -14,20 +15,22 @@ namespace Devboost.ChallengeDay.Api.Controllers
         private readonly ITransacaoQuery _transacaoQuery;
 
         [HttpGet("saldo")]
-        public ActionResult<float> Get()
+        public async Task<IActionResult> Get()
         {
-            return Ok(_transacaoQuery.GetSaldo());
+            var result = await _transacaoQuery.GetSaldo();
+
+            return Ok(result);
         }
 
         [HttpPost]
-        public ActionResult Post([FromBody] TransacaoDTO transacaoDTO)
+        public async Task<IActionResult> Post([FromBody] TransacaoDTO transacaoDTO)
         {
             try
             {
                 if (transacaoDTO == null)
                     return NotFound();
 
-                ITransacaoCommand.Add(transacaoDTO);
+                await _transacaoCommand.AddProducer(transacaoDTO);
 
                 return Ok("Ação efetuado com sucesso!");
             }

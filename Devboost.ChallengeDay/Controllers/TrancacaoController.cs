@@ -6,7 +6,5 @@ namespace Devboost.ChallengeDay.Api.Controllers
     [ApiController]
     public class TrancacaoController: ControllerBase
     {
-
-
     }
 }

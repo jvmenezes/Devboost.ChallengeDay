@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Devboost.ChallengeDay.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
 namespace Devboost.ChallengeDay.Domain.Interfaces.Repositories
 {
-    public interface IRepository<T>where T : class
+    public interface IRepository<T>where T : Entity
     {
         Task<IEnumerable<T>> ObterTodos();
         Task<T> ObterPorId(Guid id);

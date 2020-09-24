@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Devboost.ChallengeDay.IoC;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +27,8 @@ namespace Devboost.ChallengeDay
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.SwaggerAdd();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

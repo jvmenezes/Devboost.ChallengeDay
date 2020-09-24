@@ -25,6 +25,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Devboost.ChallengeDay.IoC",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Devboost.ChallengeDay.Data", "Devboost.ChallengeDay.Data\Devboost.ChallengeDay.Data.csproj", "{3B7C0C5F-C214-4F2D-A7F8-FC95CFD5220B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5 - Tests", "5 - Tests", "{791BC49D-3C19-412C-993C-FEB646BB344B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Devboost.ChallengeDay.Test", "Devboost.ChallengeDay.Test\Devboost.ChallengeDay.Test.csproj", "{64EFA123-4048-4577-A868-B9D8AA3CDD44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +59,10 @@ Global
 		{3B7C0C5F-C214-4F2D-A7F8-FC95CFD5220B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B7C0C5F-C214-4F2D-A7F8-FC95CFD5220B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B7C0C5F-C214-4F2D-A7F8-FC95CFD5220B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64EFA123-4048-4577-A868-B9D8AA3CDD44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64EFA123-4048-4577-A868-B9D8AA3CDD44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64EFA123-4048-4577-A868-B9D8AA3CDD44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64EFA123-4048-4577-A868-B9D8AA3CDD44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +74,7 @@ Global
 		{CE94222A-8691-4E7D-863C-E4C939DCB746} = {FDEA76FA-651D-4B5C-A6F6-DF8ABABD26F9}
 		{71514663-303F-49E7-8429-3857F8CFEFD0} = {345F047F-3E87-4575-A2CF-7000C3842A7C}
 		{3B7C0C5F-C214-4F2D-A7F8-FC95CFD5220B} = {345F047F-3E87-4575-A2CF-7000C3842A7C}
+		{64EFA123-4048-4577-A868-B9D8AA3CDD44} = {791BC49D-3C19-412C-993C-FEB646BB344B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F97C85C3-840B-4B36-9117-5A7F4A523622}

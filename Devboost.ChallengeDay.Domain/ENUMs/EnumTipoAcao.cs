@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Devboost.ChallengeDay.Domain.ENUMs
 {
-    public enum TipoAcao
+    public enum EnumTipoAcao
     {
         Saque,
         Deposito

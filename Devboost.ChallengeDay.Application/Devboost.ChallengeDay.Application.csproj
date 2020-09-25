@@ -4,7 +4,11 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
+	<ItemGroup>		
+		<PackageReference Include="ServiceStack.OrmLite" Version="5.9.2" />
+	</ItemGroup>
+
+	<ItemGroup>
     <ProjectReference Include="..\Devboost.ChallengeDay.Domain\Devboost.ChallengeDay.Domain.csproj" />
   </ItemGroup>
 

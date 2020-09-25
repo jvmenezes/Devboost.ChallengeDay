@@ -1,8 +1,9 @@
-﻿using System.Threading.Tasks;
+﻿using Devboost.ChallengeDay.Domain.Interfaces.Queries;
+using System.Threading.Tasks;
 
 namespace Devboost.ChallengeDay.Application.Queries
 {
-    public class TransacaoQuery
+    public class TransacaoQuery : ITransacaoQuery
     {
         public async Task<float> GetSaldo()
         {

@@ -9,7 +9,7 @@ namespace Devboost.ChallengeDay.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class TrancacaoController: ControllerBase
+    public class TransacaoController: ControllerBase
     {
         private readonly ITransacaoCommand _transacaoCommand;
         private readonly ITransacaoQuery _transacaoQuery;

@@ -1,4 +1,5 @@
-﻿using Devboost.ChallengeDay.Consumer.Domain.Interfaces;
+﻿
+using Devboost.ChallengeDay.Consumer.Domain.Interfaces;
 using Devboost.ChallengeDay.Consumer.Services;
 using Devboost.ChallengeDay.Shared.Domain.Interfaces;
 using Hangfire;

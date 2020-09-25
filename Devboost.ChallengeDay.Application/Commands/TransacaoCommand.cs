@@ -25,7 +25,7 @@ namespace Devboost.ChallengeDay.Application.Commands
         {
             var model = transacao.ConvertTo<TransacaoModel>();
 
-            _transacaoService.add
+            await _transacaoService.EfetuarAcao(model);
         }
     }
 }

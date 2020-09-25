@@ -14,6 +14,12 @@ namespace Devboost.ChallengeDay.Api.Controllers
         private readonly ITransacaoCommand _transacaoCommand;
         private readonly ITransacaoQuery _transacaoQuery;
 
+        public TransacaoController(ITransacaoCommand transacaoCommand, ITransacaoQuery transacaoQuery)
+        {
+            _transacaoCommand = transacaoCommand;
+            _transacaoQuery = transacaoQuery;
+        }
+
         [HttpGet("saldo")]
         public async Task<IActionResult> Get()
         {
@@ -57,6 +63,5 @@ namespace Devboost.ChallengeDay.Api.Controllers
                 throw ex;
             }
         }
-
     }
 }

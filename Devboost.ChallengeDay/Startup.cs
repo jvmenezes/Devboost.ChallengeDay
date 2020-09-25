@@ -21,6 +21,7 @@ namespace Devboost.ChallengeDay
         {
             services.AddControllers();
             services.Register(Configuration);
+            services.SwaggerAdd();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,6 +37,8 @@ namespace Devboost.ChallengeDay
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.SwaggerAdd();
 
             app.UseEndpoints(endpoints =>
             {

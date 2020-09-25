@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
+﻿using Devboost.ChallengeDay.Domain.ENUMs;
+using MongoDB.Bson.Serialization.Attributes;
 using System;
 
 namespace Devboost.ChallengeDay.Domain.Entities
@@ -7,7 +8,8 @@ namespace Devboost.ChallengeDay.Domain.Entities
     {
         [BsonId]
         public Guid Id { get; set; }
-        protected Entity()
+
+        protected TransacaoModel()
         {
             Id = Guid.NewGuid();
         }

@@ -21,7 +21,7 @@ namespace Devboost.ChallengeDay.Application.Commands
             _transacaoService = transacaoService;
         }
 
-        public async Task AddConsumer(TransacaoDTO transacao)  
+        public async Task AddProducer(TransacaoDTO transacao)  
         {
             var output = JsonConvert.SerializeObject(transacao);
             await _producer.SendDataAsync(ProjectConsts.TOPIC_NAME, output);     

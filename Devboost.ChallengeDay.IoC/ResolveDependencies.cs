@@ -2,6 +2,8 @@
 using Devboost.ChallengeDay.Data.Contexts;
 using Devboost.ChallengeDay.Data.Repositories;
 using Devboost.ChallengeDay.Domain.Interfaces.Repositories;
+using Devboost.ChallengeDay.Shared.Domain.Interfaces;
+using Devboost.ChallengeDay.Shared.Services;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MongoDB.Bson;
@@ -21,6 +23,8 @@ namespace Devboost.ChallengeDay.IoC
             services.AddScoped(typeof(MongoDbContext<>));
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+
+            services.AddSingleton<IProducer, Producer>();
 
             MongoConfig.ConnectionString = configuration.GetSection("MongoConnection:ConnectionString").Value;
             MongoConfig.DatabaseName = configuration.GetSection("MongoConnection:Database").Value;

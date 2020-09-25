@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Hangfire.Core" Version="1.7.14" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Shared\Devboost.ChallengeDay.Shared.Domain\Devboost.ChallengeDay.Shared.Domain.csproj" />
+    <ProjectReference Include="..\..\Domain\Devboost.ChallengeDay.Consumer.Domain\Devboost.ChallengeDay.Consumer.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

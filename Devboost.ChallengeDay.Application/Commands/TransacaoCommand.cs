@@ -1,4 +1,7 @@
-﻿using Devboost.ChallengeDay.Domain.DTOs;
+using Devboost.ChallengeDay.Domain.DTOs;
+using Devboost.ChallengeDay.Shared.Domain.Constants;
+using Devboost.ChallengeDay.Shared.Domain.Interfaces;
+using Newtonsoft.Json;
 using Devboost.ChallengeDay.Domain.Entities;
 using Devboost.ChallengeDay.Domain.Interfaces.Commands;
 using Devboost.ChallengeDay.Domain.Services;
@@ -9,16 +12,19 @@ namespace Devboost.ChallengeDay.Application.Commands
 {
     public class TransacaoCommand : ITransacaoCommand
     {
+        private readonly IProducer _producer;
         private readonly ITransacaoService _transacaoService;
 
-        public TransacaoCommand(ITransacaoService transacaoService)
+        public TransacaoCommand(IProducer producer, ITransacaoService transacaoService)
         {
+            _producer = producer;
             _transacaoService = transacaoService;
         }
 
-        public Task AddProducer(TransacaoDTO transacao)
+        public async Task AddConsumer(TransacaoDTO transacao)  
         {
-            throw new System.NotImplementedException();
+            var output = JsonConvert.SerializeObject(transacao);
+            await _producer.SendDataAsync(ProjectConsts.TOPIC_NAME, output);     
         }
 
         public async Task AddReal(TransacaoDTO transacao)

@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Hangfire" Version="1.7.14" />
+    <PackageReference Include="Hangfire.MemoryStorage" Version="1.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Consumer\Domain\Devboost.ChallengeDay.Consumer.Domain\Devboost.ChallengeDay.Consumer.Domain.csproj" />
+    <ProjectReference Include="..\Consumer\Services\Devboost.ChallengeDay.Consumer.Services\Devboost.ChallengeDay.Consumer.Services.csproj" />
+    <ProjectReference Include="..\Shared\Devboost.ChallengeDay.Shared.Domain\Devboost.ChallengeDay.Shared.Domain.csproj" />
+    <ProjectReference Include="..\Shared\Devboost.ChallengeDay.Shared.Services\Devboost.ChallengeDay.Shared.Services.csproj" />
+  </ItemGroup>
+
+
+</Project>

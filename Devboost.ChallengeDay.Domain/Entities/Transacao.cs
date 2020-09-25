@@ -3,7 +3,7 @@ using System;
 
 namespace Devboost.ChallengeDay.Domain.Entities
 {
-    public class TransacaoModel : Entity
+    public class Transacao : Entity
     {
         public int IDUser { get; set; } = 1;
 

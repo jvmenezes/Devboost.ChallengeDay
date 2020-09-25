@@ -9,7 +9,7 @@ namespace Devboost.ChallengeDay.Domain.Entities
         [BsonId]
         public Guid Id { get; set; }
 
-        protected TransacaoModel()
+        protected Entity()
         {
             Id = Guid.NewGuid();
         }

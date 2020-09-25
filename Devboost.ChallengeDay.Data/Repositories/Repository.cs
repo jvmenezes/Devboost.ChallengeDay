@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Devboost.ChallengeDay.Data.Repositories
 {
-    public class Repository<T> : IRepository<T> where T : TransacaoModel
+    public class Repository<T> : IRepository<T> where T : Entity
     {
         private readonly IMongoCollection<T> _repo;
 

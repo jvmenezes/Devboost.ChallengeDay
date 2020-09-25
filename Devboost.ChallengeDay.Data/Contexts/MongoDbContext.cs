@@ -4,7 +4,7 @@ using MongoDB.Driver;
 
 namespace Devboost.ChallengeDay.Data.Contexts
 {
-    public class MongoDbContext<TEntity> where TEntity : TransacaoModel
+    public class MongoDbContext<TEntity> where TEntity : Entity
     {
         private IMongoDatabase _database { get; }
 

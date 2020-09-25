@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Devboost.ChallengeDay.Domain.Interfaces.Repositories
 {
-    public interface IRepository<T>where T : TransacaoModel
+    public interface IRepository<T>where T : Entity
     {
         Task<IEnumerable<T>> ObterTodos();
         Task<T> ObterPorId(Guid id);

@@ -9,14 +9,14 @@ namespace Devboost.ChallengeDay.DomainServices.Implementation.Services
 {
     public class TransacaoService : ITransacaoService
     {
-        private readonly IRepository<TransacaoModel> _repositoryTransacao;
+        private readonly IRepository<Transacao> _repositoryTransacao;
 
-        public TransacaoService(IRepository<TransacaoModel> repositoryTransacao)
+        public TransacaoService(IRepository<Transacao> repositoryTransacao)
         {
             _repositoryTransacao = repositoryTransacao;
         }
 
-        public async Task EfetuarAcao(TransacaoModel model) 
+        public async Task EfetuarAcao(Transacao model) 
         {
             var saldo = await _repositoryTransacao.ObterPor(model => model.IDUser == 1);
 

@@ -5,6 +5,6 @@ namespace Devboost.ChallengeDay.Domain.Services
 {
     public interface ITransacaoService
     {
-        Task EfetuarAcao(TransacaoModel model);
+        Task EfetuarAcao(Transacao model);
     }
 }

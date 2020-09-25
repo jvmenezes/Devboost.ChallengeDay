@@ -23,7 +23,7 @@ namespace Devboost.ChallengeDay.Application.Commands
 
         public async Task AddReal(TransacaoDTO transacao)
         {
-            var model = transacao.ConvertTo<TransacaoModel>();
+            var model = transacao.ConvertTo<Transacao>();
 
             await _transacaoService.EfetuarAcao(model);
         }
